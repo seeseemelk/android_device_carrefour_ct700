@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/full_ct700.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/lineage_ct700.mk
