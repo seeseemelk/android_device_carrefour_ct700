@@ -13,8 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/carrefour/ct700/device-ct700.mk)
+#$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
 PRODUCT_NAME := lineage_ct700
@@ -22,6 +24,8 @@ PRODUCT_DEVICE := ct700
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := ct700
 PRODUCT_MANUFACTURER := Carrefour
+
+PLATFORM_VERSION := 28
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="ct700-user" \

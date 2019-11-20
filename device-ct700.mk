@@ -14,13 +14,17 @@
 # limitations under the License.
 #
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/carrefour/ct700-kernel/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+#ifeq ($(TARGET_PREBUILT_KERNEL),)
+#LOCAL_KERNEL := device/carrefour/ct700-kernel/kernel
+#else
+#LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+#endif
+#
+#PRODUCT_COPY_FILES := \
+#	$(LOCAL_KERNEL):kernel
+#
 
-PRODUCT_COPY_FILES := \
-	$(LOCAL_KERNEL):kernel
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 480
 
 $(call inherit-product-if-exists, vendor/carrefour/ct700/device-vendor.mk)
